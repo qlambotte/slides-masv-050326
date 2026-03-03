@@ -1,0 +1,404 @@
+---
+title: "Mathématique appliquée aux sciences de la vie"
+subtitle: "Séance d'exercices du 05/03/2026"
+lang: fr
+format: 
+ revealjs:
+      width: 1472
+      height: 920
+      theme: [default, clean.scss]
+      qrcode: 'assets/qrcode.png'
+      pdfl: '[Télécharger le PDF](assets/slides.pdf){.pdf-link target="_blank"}'
+      menu:
+        side: left
+      slide-number: true
+      html-math-method:
+        method: mathjax
+        url: "https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"
+      include-before-body:
+        - text: |
+            <script src="mathjax-config.js"></script>
+      transition: fade
+      revealjs-plugins:
+        - tldreveal
+      template-partials:
+        - title-slide.html
+
+---
+::: {.content-hidden}
+
+\newcommand{\dom}[1]{\text{dom}{\left(#1\right)}}
+\newcommand{\IR}{\mathbb{R}}
+\newcommand{\e}{\text{e}}
+\newcommand{\dx}{\text{d}x}
+\newcommand{\IQ}{\mathbb{Q}}
+\newcommand{\du}{\text{d}u}
+\newcommand{\IC}{\mathbb{C}}
+\newcommand{\i}{\textbf{i}}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\nv}[1]{\lVert\overrightarrow{#1}\rVert}
+
+
+
+:::
+
+
+## 
+
+:::{.exr nbr="1.1.2.(d)"}
+Équation : $y''+y'-y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+:::
+
+1. Déterminer le polynôme caractéristique : $x^2 + x - 1$.
+2. Calcul des racines du polynôme: $\Delta = 5$. Donc: les racines sont $\dfrac{-1 \pm \sqrt{5}}{2}$.
+3. Calcul de la solution générale :
+$$
+y(t) = k_1 e^{\frac{-1-\sqrt{5}}{2}t} + k_2 e^{\frac{-1+\sqrt{5}}{2}t} \textrm{ avec }  k_1, k_2 \in \mathbb{R}.
+$$
+
+
+## 
+:::{.exr nbr="1.1.2.(d)"}
+Équation : $y''+y'-y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+:::
+
+4. On cherche la solution qui satisfait aux conditions initiales:
+$$
+\begin{cases}
+k_1 + k_2 = 1 \\
+\frac{-1-\sqrt{5}}{2}k_1 + \frac{-1+\sqrt{5}}{2}k_2 = 0
+\end{cases}
+$$
+
+La solution est:
+$$
+\begin{cases}
+k_1 = \frac{5-\sqrt{5}}{10} \\
+k_2 = \frac{5+\sqrt{5}}{10}
+\end{cases}
+$$
+
+Remarque :  l'écriture $k_1 = \frac{\sqrt{5}-1}{2\sqrt{5}}$ est également correcte.
+
+##
+
+:::{.exr nbr="1.1.2.(d)"}
+Équation : $y''+y'-y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+:::
+
+5. Conclusion:
+
+$$
+y(t) =
+\frac{5-\sqrt{5}}{10} e^{\frac{-1-\sqrt{5}}{2}t}
++
+\frac{5+\sqrt{5}}{10} e^{\frac{-1+\sqrt{5}}{2}t}
+$$
+
+6. (BONUS:) vérifier en dérivant que la solution est correcte!
+
+## 
+
+:::{.exr nbr="1.1.2.(h)"}
+Équation : $y''+2y'+y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+:::
+
+
+1. Déterminer le polynôme caractéristique : $x^2 + 2x + 1$.
+2. Calcul des racines du polynôme: $\Delta = 0$. Donc on a 1 racine double : $-1$.
+3. Calcul de la solution générale :
+
+$$
+y(t) = (k_1 + k_2 t)e^{-t}, \textrm{ avec }k_1,k_2\in\IR.
+$$
+
+
+##
+
+:::{.exr nbr="1.1.2.(h)"}
+Équation : $y''+2y'+y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+:::
+
+4. On cherche la solution qui satisfait aux conditions initiales:
+$$
+\begin{cases}
+k_1 = 1 \\
+k_2 - k_1 = 0
+\end{cases}
+$$
+
+La solution est:
+
+$$
+k_1 = 1, \quad k_2 = 1
+$$
+
+5. Conclusion: $y(t) = (1+t)e^{-t}$
+
+6. (BONUS) Vérifier la solution en dérivant.
+
+## 
+
+:::{.exr nbr="1.1.2.(a)"}
+Équation : $y''+y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+:::
+
+1. Déterminer le polynôme caractéristique : $x^2 + 1$.
+2. Calculer les racines du polynôme: $\Delta = -4$. Donc les racines sont $\pm i$.
+3. Calculer la solution générale:
+$$
+y(t) = k_1 \cos(t) + k_2 \sin(t), \textrm{ avec }k_1,k_2\in\IR.
+$$
+
+
+##
+
+:::{.exr nbr="1.1.2.(a)"}
+Équation : $y''+y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+:::
+
+4. On cherche la solution qui satisfait aux conditions initiales:
+
+$$
+\begin{cases}
+k_1 = 1 \\
+k_2 = 0
+\end{cases}
+$$
+
+5. Conclusion: $y(t) = \cos(t)$.
+
+6. Vérification:
+
+## Rappel 
+
+La résolution d'une EDO (de degré 1 ou 2) se fait en deux grandes étapes (Principe de superposition):
+
+1. On calcule **toutes** les solutions de l'équation homogène (=sans terme indépendant).
+
+  - Pour l'ordre 1: l'équation homogène est séparable.
+  - Pour l'ordre 2: on résout l'équation homogène en calculant les racines du polynôme caractéristique (cf. slide suivante)
+
+2. On calcule **UNE** solution de l'équation de départ:
+
+  - Pour l'équation $y'=ay+b$, on utilise la **variation des constantes**: une solution particulière est de la forme 
+  $y(t)=k(t)\e^{A(t)}$ où $A'(t)=a(t)$ et $k$ est à déterminer
+
+  - Pour l'équation $ay''+by'+cy=f(t)$, on donnera **toujours** la forme d'une solution particulière dans l'énoncé de l'exercice.
+
+## Rappel
+
+Pour résoudre l'équation $ay''+by'+cy=0$, on calcule les racines du polynôme $P(x)=ax^2+bx+c$. 
+
+1. Si $P$ a deux racines réelles distinctes $r_1$ et $r_2$ ($\Delta>0$), alors la solution générale de l'équation est
+
+  $$
+k_1\e^{r_1t}+k_2\e^{r_2t}
+  $$
+
+2. Si $P$ a une unique racine réelle $r$ ($\Delta=0$), alors la solution générale de l'équation est
+
+$$
+(k_1+k_2t)\e^{rt}
+$$
+
+3. Si $P$ a deux solutions complexes $u+iv$ et $u-iv$ ($\Delta<0$), alors la solution générale de l'équation est
+
+$$
+\e^{ut}\left(k_1\cos(vt)+k_2\sin(vt)\right)=c_1\e^{ut}\sin(vt+c_2).
+$$
+
+
+## 
+
+:::{.exr nbr="1.1.9"}
+On considère l'équation $2y''(t) - 4y'(t) - 6y(t) = 2$.
+
+(a) Donner la solution générale de l’équation homogène associée.
+(b) Trouver une fonction constante qui est solution de $2y''(t) - 4y'(t) - 6y(t) = 2$.
+(c) Donner la fonction $y(t)$ qui satisfait l’équation de b) ainsi que les conditions $y(0) =0, y'(0) = 5.$
+:::
+
+##
+
+:::{.exr nbr="1.1.9"}
+
+On considère l'équation $2y''(t) - 4y'(t) - 6y(t) = 2$.
+
+(a) Donner la solution générale de l’équation homogène associée.
+
+:::
+
+
+<input type="checkbox" class="hide-toggle" id="toggle3" style="display:none;">
+<label for="toggle3" class="hide-toggle-label">☑</label>
+
+:::{.hide}
+1. L'équation homogène est: $2y'' - 4y' - 6y = 0$
+2. Polynôme caractéristique : $2x^2 - 4x - 6$
+3. Racines du polynôme: $\Delta = 64$, donc les racines sont: $-1$ et $3$.
+4. Écriture de la solution générale:
+$$
+y_h(t) = k_1 e^{-t} + k_2 e^{3t}
+$$
+
+:::
+
+## 
+
+:::{.exr nbr="1.1.9"}
+
+On considère l'équation $2y''(t) - 4y'(t) - 6y(t) = 2$.
+
+(b) Trouver une fonction constante qui est solution de $2y''(t) - 4y'(t) - 6y(t) = 2$.
+
+:::
+
+
+<input type="checkbox" class="hide-toggle" id="toggle0" style="display:none;">
+<label for="toggle0" class="hide-toggle-label">☑</label>
+
+:::{.hide}
+1. On pose $y_p(t)=c$, où $c\in\IR$ est à déterminer.
+2. $y_p$ est une solution. Comme $c'=0$ et $c''=0$ :
+
+$$
+-6c = 2
+$$
+
+Donc $y_p(t) = -\frac{1}{3}$ est la solution particulière cherchée.
+
+:::
+
+## 
+
+:::{.exr nbr="1.1.9"}
+
+On considère l'équation $2y''(t) - 4y'(t) - 6y(t) = 2$.
+
+(c) Donner la fonction $y(t)$ qui satisfait l’équation de b) ainsi que les conditions $y(0) =0, y'(0) = 5$.
+
+:::
+
+
+<input type="checkbox" class="hide-toggle" id="toggle4" style="display:none;">
+<label for="toggle4" class="hide-toggle-label">☑</label>
+
+:::{.hide}
+
+1. Écriture de la solution générale de l'équation non-homogène :$y(t) = k_1 e^{-t} + k_2 e^{3t} - \dfrac{1}{3}$
+
+2. On cherche la solution qui satisfait les conditions initiales:$\begin{cases}
+k_1 + k_2 - \frac{1}{3} = 0 \\
+-k_1 + 3k_2 = 5
+\end{cases}
+$
+
+  Donc : $k_1 = -1, \quad k_2 = \dfrac{4}{3}$.
+
+3. Conclusion: $y(t) = -e^{-t} + \dfrac{4}{3}e^{3t} - \dfrac{1}{3}$
+
+:::
+
+## Exercice 1.1.4
+
+:::{.exr nbr="1.1.9"}
+
+Résoudre l'équation suivante avec la méthode de la variation de la constante: $y'-3y=8t\cdot \e^{5t}$.
+
+:::
+
+
+<input type="checkbox" class="hide-toggle" id="toggle1" style="display:none;">
+<label for="toggle1" class="hide-toggle-label">☑</label>
+
+On applique le principe de superposition:
+
+(a) Résolution de l'équation homogène: $y'-3y=0$.
+
+:::{.hide}
+
+L'équation homogène est séparable et on obtient:
+
+$$
+y_h(t) = k e^{3t}
+$$
+
+:::
+
+## 
+:::{.exr nbr="1.1.9"}
+
+Résoudre l'équation suivante avec la méthode de la variation de la constante: $y'-3y=8t\cdot \e^{5t}$.
+
+:::
+
+
+<input type="checkbox" class="hide-toggle" id="toggle5" style="display:none;">
+<label for="toggle5" class="hide-toggle-label">☑</label>
+
+On applique le principe de superposition:
+
+(b) On cherche **UNE** solution de l'équation $y'-3y=8t\cdot \e^{5t}$.
+
+
+:::{.hide}
+On cherche une solution de la forme $y_p(t) = k(t)e^{3t}$.
+
+Puisque $y_p$ est une solution de l'équation pour une fonction $k$ à déterminer:
+
+
+$$
+k(t) = \int 8t e^{5t} e^{-3t} dt
+= \int 8t e^{2t} dt
+$$
+
+
+
+:::
+
+## 
+
+:::{.exr nbr="1.1.9"}
+
+Résoudre l'équation suivante avec la méthode de la variation de la constante: $y'-3y=8t\cdot \e^{5t}$.
+
+:::
+
+
+<input type="checkbox" class="hide-toggle" id="toggle7" style="display:none;">
+<label for="toggle7" class="hide-toggle-label">☑</label>
+
+On applique le principe de superposition:
+
+(b) On cherche **UNE** solution de l'équation $y'-3y=8t\cdot \e^{5t}$.
+
+:::{.hide}
+
+Par intégration par parties, on trouve donc **UNE** fonction $k$: $k(t) = (4t-2)e^{2t}$.
+
+(Remarque : pas besoin d'ajouter une constante d’intégration.)
+
+Donc $y_p(t) = (4t-2)e^{5t}$
+
+En conclusion: $y(t) = k e^{3t} + (4t-2)e^{5t}$ avec $k \in \mathbb{R}$.
+
+:::
+
+
+
+
+<script>
+document.querySelectorAll('.reveal .slide').forEach(slide => {
+  const checkbox = slide.querySelector('.hide-toggle');
+  const hideBlocks = slide.querySelectorAll('.hide');
+  if (checkbox && hideBlocks.length > 0) {
+    checkbox.addEventListener('change', () => {
+      hideBlocks.forEach(b => {
+        b.style.display = checkbox.checked ? 'block' : 'none';
+      });
+    });
+  }
+});
+</script>

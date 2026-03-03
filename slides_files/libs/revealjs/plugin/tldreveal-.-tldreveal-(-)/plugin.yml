@@ -1,0 +1,6 @@
+name: Tldreveal.Tldreveal()
+script: index.js
+stylesheet: index.css
+config:
+  tldreveal:
+    isDarkMode: false
