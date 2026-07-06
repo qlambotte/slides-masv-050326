@@ -412,7 +412,7 @@ $selection-bg: #26351c !default;
 
 /* titre inline avec numéro */
 .reveal .exr::before {
-  content: "Exercice " attr(data-nbr) ": ";
+  content: "Question " attr(data-nbr) ": ";
   font-weight: normal;
   color: $accent;
   margin-right: 0.4em;

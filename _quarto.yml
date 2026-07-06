@@ -4,5 +4,5 @@ project:
   resources:
     - assets/**
 
-  post-render: "bash post-render.sh"
+#  post-render: "bash post-render.sh"
 

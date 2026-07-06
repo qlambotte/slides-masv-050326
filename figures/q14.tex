@@ -1,0 +1,45 @@
+\documentclass{standalone}
+
+\usepackage{tkz-euclide}
+\newcommand{\?}{\stackrel{?}{=}}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.35]
+
+% =========================
+% POINTS
+% =========================
+
+\tkzDefPoint(2,2){A}
+\tkzDefPoint(8,4){B}
+\tkzDefPoint(5,8){C}
+\tkzDefPoint(6.5,3.5){H}
+\tkzDrawPoints[color=black, size=1](A,...,C,H)
+\tkzDrawSegment[dotted](C,H)
+% =========================
+% HEXAGONES
+% =========================
+
+\tkzDrawPolygon(A,B,C)
+
+% =========================
+% LABELS
+% =========================
+
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[right](B)
+\tkzLabelPoints[above](C)
+
+\tkzLabelPoints[below](H)
+
+\end{tikzpicture}
+
+\end{document}
+
+\vspace{0.5cm}
+
+
+
+\end{document}

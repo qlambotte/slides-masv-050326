@@ -1,6 +1,6 @@
 ---
-title: "Mathématique appliquée aux sciences de la vie"
-subtitle: "Séance d'exercices du 05/03/2026"
+title: "Préparation au Concours d’entrée et d’accès en médecine et dentisterie"
+subtitle: "Mathématiques, partie Géométrie"
 lang: fr
 format: 
  revealjs:
@@ -12,6 +12,7 @@ format:
       menu:
         side: left
       slide-number: true
+      incremental: true 
       html-math-method:
         method: mathjax
         url: "https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"
@@ -35,6 +36,7 @@ format:
 \newcommand{\du}{\text{d}u}
 \newcommand{\IC}{\mathbb{C}}
 \newcommand{\i}{\textbf{i}}
+\newcommand{\?}{\stackrel{?}{=}}
 
 \newcommand{\vect}[1]{\overrightarrow{#1}}
 \newcommand{\nv}[1]{\lVert\overrightarrow{#1}\rVert}
@@ -46,359 +48,631 @@ format:
 
 ## 
 
-:::{.exr nbr="1.1.2.(d)"}
-Équation : $y''+y'-y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+::::{.exr nbr="11"}
+
+La figure est composée de trois hexagones réguliers identiques.
+
+![](figures/question011_1.svg){fig-align="center" width=40%}
+
+ Parmi les égalités vectorielles suivantes, une seule est vraie. Laquelle?
+
+:::: {.columns}
+
+::: {.column width="48%"}
+⃝ **A**&nbsp;&nbsp;&nbsp;&nbsp; $\vect{FD} - \vect{FE} = \vect{AJ}$
+
+⃝ **C**&nbsp;&nbsp;&nbsp;&nbsp; $\vect{BD} + \vect{FI} = \vect{AJ}$
 :::
 
-1. Déterminer le polynôme caractéristique : $x^2 + x - 1$.
-2. Calcul des racines du polynôme: $\Delta = 5$. Donc: les racines sont $\dfrac{-1 \pm \sqrt{5}}{2}$.
-3. Calcul de la solution générale :
-$$
-y(t) = k_1 e^{\frac{-1-\sqrt{5}}{2}t} + k_2 e^{\frac{-1+\sqrt{5}}{2}t} \textrm{ avec }  k_1, k_2 \in \mathbb{R}.
-$$
+::: {.column width="48%"}
+[✓ **B**&nbsp;&nbsp;&nbsp;&nbsp; $\vect{AG} + \vect{DL} = \vect{CK}$]{style="color:green;"}
 
-
-## 
-:::{.exr nbr="1.1.2.(d)"}
-Équation : $y''+y'-y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+⃝ **D**&nbsp;&nbsp;&nbsp;&nbsp; $\vect{AD} - \vect{IH} = \vect{FH}$
 :::
 
-4. On cherche la solution qui satisfait aux conditions initiales:
-$$
-\begin{cases}
-k_1 + k_2 = 1 \\
-\frac{-1-\sqrt{5}}{2}k_1 + \frac{-1+\sqrt{5}}{2}k_2 = 0
-\end{cases}
-$$
+::::
+::::
 
-La solution est:
-$$
-\begin{cases}
-k_1 = \frac{5-\sqrt{5}}{10} \\
-k_2 = \frac{5+\sqrt{5}}{10}
-\end{cases}
-$$
+## Réponse **A**?
 
-Remarque :  l'écriture $k_1 = \frac{\sqrt{5}-1}{2\sqrt{5}}$ est également correcte.
+![](figures/q11-a.svg){fig-align="center" width=40%}
+
+## Réponse **A**: NON
+
+![](figures/q11-a2.svg){fig-align="center" width=40%}
+
+## Réponse **B**?
+
+![](figures/q11-b.svg){fig-align="center" width=40%}
+
+## Réponse **B**: OUI
+
+![](figures/q11-b2.svg){fig-align="center" width=40%}
 
 ##
 
-:::{.exr nbr="1.1.2.(d)"}
-Équation : $y''+y'-y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+::::{.exr nbr="12"}
+
+Dans le plan muni d'un repère orthonormé, on considère la droite passant par les points $(0;3)$ et $(2;0)$. On considère également une autre droite d'équation $60x+ky+21=0$ où $k$ est un paramètre. 
+Pour quelle valeur de $k$ ces deux droites sont-elles perpendiculaires?
+
+:::: {.columns}
+
+::: {.column width="48%"}
+[✓ **A**&nbsp;&nbsp;&nbsp;&nbsp; $k=-90$]{style="color:green;"}
+
+⃝ **C**&nbsp;&nbsp;&nbsp;&nbsp; $k=40$
 :::
 
-5. Conclusion:
+::: {.column width="48%"}
+⃝ **B**&nbsp;&nbsp;&nbsp;&nbsp; $k=-40$
 
-$$
-y(t) =
-\frac{5-\sqrt{5}}{10} e^{\frac{-1-\sqrt{5}}{2}t}
-+
-\frac{5+\sqrt{5}}{10} e^{\frac{-1+\sqrt{5}}{2}t}
-$$
-
-6. (BONUS:) vérifier en dérivant que la solution est correcte!
-
-## 
-
-:::{.exr nbr="1.1.2.(h)"}
-Équation : $y''+2y'+y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+⃝ **D**&nbsp;&nbsp;&nbsp;&nbsp; $k=90$
 :::
 
+::::
+::::
 
-1. Déterminer le polynôme caractéristique : $x^2 + 2x + 1$.
-2. Calcul des racines du polynôme: $\Delta = 0$. Donc on a 1 racine double : $-1$.
-3. Calcul de la solution générale :
+. . .
+
+**Stratégie:** identifier des vecteurs directeurs pour chacune des droites.
+
+. . .
+
+**Rappel:** $d_1$ et $d_2$ sont deux droites. $\vect{v}_1$ et $\vect{v}_2$ sont deux vecteurs directeurs respectifs.
+
+- deux droites $d_1$ et $d_2$ sont perpendiculaires si et seulement si $\vect{v}_1$ et $\vect{v}_2$ sont orthogonaux.
+
+- deux vecteurs $\vect{v}_1$ et $\vect{v}_2$ sont perpendiculaires si et seulement si $\vect{v}_1\cdot \vect{v}_2=0$.
+
+## Calcul des vecteurs directeurs
+
+- La droite passant par $A=(0;3)$ et $B=(2;0)$ a un vecteur directeur qui est $$\vect{AB}=(2-0;0-3)=(2;-3).$$
+
+- Une droite d'équation $ax+by+c=0$ a un vecteur directeur dont les composantes sont $(-b;a)$. Donc un vecteur directeur de la droite d'équation $60x+ky+21=0$ est $\vect{v}=(-k;60)$.
+
+## Calcul du produit scalaire
+
+D'après le rappel, nos deux droites seront perpendiculaires uniquement dans le cas où $\vect{AB}\cdot \vect{v}=0$.
+
+. . .
+
+ Or 
 
 $$
-y(t) = (k_1 + k_2 t)e^{-t}, \textrm{ avec }k_1,k_2\in\IR.
+\vect{AB}\cdot \vect{v}=2\cdot(-k)+(-3)\cdot 60=-2k-180.
 $$
 
+. . .
+
+
+Donc 
+
+$$\vect{AB}\cdot \vect{v}=0\Leftrightarrow -2k-180=0\Leftrightarrow-2k=180\Leftrightarrow k=-90.$$
+
+. . .
+
+
+Donc la bonne réponse est la réponse **A**.
 
 ##
 
-:::{.exr nbr="1.1.2.(h)"}
-Équation : $y''+2y'+y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+::::{.exr nbr="13"}
+
+Dans un repère cartésien orthonormé $Oxy$, considérons la droite $d_1$ d'équation $y=2x-1$ et la droite $d_2$ perpendiculaire à $d_1$ et la coupant au point de coordonnées $(5;9)$.
+
+Quelles sont les coordonnées du point d'intersection de $d_2$ avec l'axe $Oy$? 
+
+:::: {.columns}
+
+::: {.column width="48%"}
+⃝ **A**&nbsp;&nbsp;&nbsp;&nbsp; ${\left(0;\frac{19}{2}\right)}$
+
+[✓ **C**&nbsp;&nbsp;&nbsp;&nbsp; ${\left(0;\frac{23}{2}\right)}$]{style="color:green;"}
 :::
 
-4. On cherche la solution qui satisfait aux conditions initiales:
+::: {.column width="48%"}
+⃝ **B**&nbsp;&nbsp;&nbsp;&nbsp; ${\left(0;\frac{21}{2}\right)}$
+
+⃝ **D**&nbsp;&nbsp;&nbsp;&nbsp; ${\left(0;\frac{25}{2}\right)}$
+:::
+
+::::
+
+::::
+
+. . .
+
+
+**Stratégie:** Calculer une équation cartésienne de la droite $d_2$. Puis on cherche le point demandé, qui correspond à l'ordonnée à l'origine de la droite.
+
+. . .
+
+
+**Rappels:** Une droite **non-verticale** à toujours une équation cartésienne de la forme $y=mx+p$ où $m$ est représente la pente et $p$ représente l'ordonnée à l'origine.
+
+. . .
+
+Deux droites **non-verticales** sont perpendiculaires si le produit de leurs pentes vaut $-1$.
+
+## Calcul d'une équation cartésienne de $d_2$.
+
+Comme $d_1\perp d_2$, on sait que le produit de leurs pentes vaut $-1$. Or la pente de $d_1=2$. Notons $m$ la pente de $d_2$. Alors
+$2m=-1$. Donc $m=\dfrac{-1}{2}$.
+
+. . .
+
+
+Donc $d_2\equiv y=\dfrac{-1}{2}x+p$. Comme $(5;9)\in d_2$, on a:
+
+. . .
+
 $$
+9=\dfrac{-1}{2}\cdot 5+p.
+$$
+
+. . .
+
+Donc $p=9+\dfrac{5}{2}=\dfrac{23}{2}$. Donc $d_2\equiv y=\dfrac{-1}{2}x+\dfrac{23}{2}$. Le point d'intersection entre $d_2$ et $Oy$ est donc $\left(0;\dfrac{23}{2}\right)$.
+
+. . .
+
+
+La bonne réponse est la réponse **C**.
+
+##
+
+::::{.exr nbr="14"}
+
+Dans le plan muni d'un repère orthonormé, on considère les points $A$ de coordonnées $(2;2)$, $B$ de coordonnées $(8;4)$ et $C$ de coordonnées $(5;8)$. Considérons également le point $H$ correspondant au pied de la hauteur issue de $C$ dans le triangle $ABC$.
+
+Quelles sont les coordonnées de $H$?
+
+:::: {.columns}
+
+::: {.column width="48%"}
+[✓ **A**&nbsp;&nbsp;&nbsp;&nbsp; ${\left(\frac{13}{2} ;\frac{7}{2} \right)}$]{style="color:green;"}
+
+⃝ **C**&nbsp;&nbsp;&nbsp;&nbsp; ${\left(5 ;3 \right)}$
+:::
+
+::: {.column width="48%"}
+⃝ **B**&nbsp;&nbsp;&nbsp;&nbsp; ${\left(\frac{7}{2} ;\frac{13}{2} \right)}$
+
+⃝ **D**&nbsp;&nbsp;&nbsp;&nbsp; ${\left( 6;4 \right)}$
+:::
+
+::::
+
+::::
+
+. . .
+
+
+**Stratégie:** similaire à la question précédente, sachant que la hauteur issue de $C$ est perpendiculaire à $AB$.
+
+![](figures/q14.svg){fig-align="center" width=20%}
+
+
+## Calcul d'équations pour $CH$ et $AB$
+
+- La droite $AB$ est non-verticale et a une équation de la forme $y=mx+p$. 
+
+  - $m=\dfrac{y_B-y_A}{x_B-x_A}=\dfrac{4-2}{8-2}=\dfrac{1}{3}$. Donc $AB\equiv y=\dfrac{1}{3}x+p$
+  - comme $A\in AB$, $2=\dfrac{1}{3}\cdot 2+p$. Donc $p=2-\dfrac{2}{3}=\dfrac{4}{3}$.
+  - Donc 
+      $$  
+      AB\equiv y=\dfrac{1}{3}x+\dfrac{4}{3}
+      $$
+
+## Calcul d'équations pour $CH$ et $AB$
+
+- La droite $CH$ est non-verticale et a une équation de la forme $y=mx+p$.
+
+  - Comme $CH\perp AB$, $\dfrac{1}{3}m=-1$. Donc $m=-3$. Donc $CH\equiv y=-3x+p$.
+  - Comme $C\in CH$, $8=-3\cdot 5+p$. Donc $p=8+15=23$. 
+  - Donc 
+      $$
+      CH\equiv y=-3x+23.
+      $$
+
+## Calcul des coordonnées de $H$
+
+$H$ est le point d'intersection des droites $AB$ et $CH$. Donc les coordonnées de $H$ doivent satisfaire simultanément les deux équations trouvées précédemment. 
+
+. . .
+
+
+Donc pour calculer les coordonnées de $H$, on va résoudre le système:
+
 \begin{cases}
-k_1 = 1 \\
-k_2 - k_1 = 0
+y=-3x+23\\
+y=\dfrac{1}{3}x+\dfrac{4}{3}
+
 \end{cases}
-$$
 
-La solution est:
+. . .
 
-$$
-k_1 = 1, \quad k_2 = 1
-$$
 
-5. Conclusion: $y(t) = (1+t)e^{-t}$
+De ce deux équations on a $-3x+23=\dfrac{1}{3}x+\dfrac{4}{3}$. Donc $x=\dfrac{13}{2}$.
 
-6. (BONUS) Vérifier la solution en dérivant.
+. . .
 
-## 
+D'après la première équation du système, $y=-3\cdot \dfrac{13}{2}+23=\dfrac{7}{2}$.
 
-:::{.exr nbr="1.1.2.(a)"}
-Équation : $y''+y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
-:::
+. . .
 
-1. Déterminer le polynôme caractéristique : $x^2 + 1$.
-2. Calculer les racines du polynôme: $\Delta = -4$. Donc les racines sont $\pm i$.
-3. Calculer la solution générale:
-$$
-y(t) = k_1 \cos(t) + k_2 \sin(t), \textrm{ avec }k_1,k_2\in\IR.
-$$
-
+Donc ${\left(\frac{13}{2} ;\frac{7}{2} \right)}$ et la bonne réponse est la réponse **A**.
 
 ##
 
-:::{.exr nbr="1.1.2.(a)"}
-Équation : $y''+y=0$, C.I.: $y(0)=1$ et $y'(0)=0$.
+::::{.exr nbr="15"}
+
+On considère quatre points $P$, $Q$, $R$ et $S$ formant un parallélogramme tel que $\vect{PQ}$ a la même direction que $\vect{SR}$ et $\vect{PS}$ a la même direction que $\vect{QR}$.
+
+Parmi les expressions suivantes, quelle est celle qui exprime le vecteur $\vect{QS}-2\vect{PQ}$ comme une combinaison linéaire des vecteurs $\vect{PS}$ et $\vect{PR}$?
+
+:::: {.columns}
+
+::: {.column width="48%"}
+⃝ **A**&nbsp;&nbsp;&nbsp;&nbsp; ${3\vect{PS}-4\vect{PR}}$
+
+⃝ **C**&nbsp;&nbsp;&nbsp;&nbsp; ${-3\vect{PS}+4\vect{PR}}$
 :::
 
-4. On cherche la solution qui satisfait aux conditions initiales:
+::: {.column width="48%"}
+[✓ **B**&nbsp;&nbsp;&nbsp;&nbsp; ${4\vect{PS}-3\vect{PR}}$]{style="color:green;"}
+
+⃝ **D**&nbsp;&nbsp;&nbsp;&nbsp; ${-4\vect{PS}+3\vect{PR}}$
+:::
+
+::::
+
+::::
+
+. . .
+
+
+**Stratégie:** exprimer $\vect{QS}$ et $\vect{PQ}$ comme des combinaisons linéaires de $\vect{PS}$ et $\vect{PR}$.
+
+![](figures/q15.svg){fig-align="center" width=40%}
+
+
+## Écriture de $\vect{QS}$ comme combili de $\vect{PS}$ et $\vect{PR}$.
+
+
+![](figures/q15-1.svg){fig-align="center" width=40%}
+
+. . .
+
+
+Donc $\vect{QS}=\vect{QP}+\vect{PS}$.
+
+## Écriture de $\vect{QP}$ comme combili de $\vect{PS}$ et $\vect{PR}$.
+
+
+
+![](figures/q15-2.svg){fig-align="center" width=40%}
+
+##  Écriture de $\vect{QS}-2\vect{PQ}$ comme combili de $\vect{PS}$ et $\vect{PR}$.
+
+. . .
+
+Comme $\vect{QS}=\vect{QP}+\vect{PS}$ et $\vect{PQ}=\vect{PS}-\vect{PR}$,
+
+. . .
 
 $$
+\vect{QS}-2\vect{PQ}=\vect{QS}+2\vect{QP}=\vect{QP}+\vect{PS}+2(\vect{PS}-\vect{PR})=4\vect{PS}-3\vect{PR}.
+$$
+
+. . .
+
+Donc la bonne réponse est la réponse **B**.
+
+##
+
+::::{.exr nbr="16"}
+
+Dans le plan muni d'un repère orthonormé, on considère les trois droites suivantes : $d_1\equiv y =3x+1$, ${d_2 \equiv y = \frac{x}{2}+1}$ et $d_3 \equiv y=6-2x$. Soient $A$ le point d'intersection de $d_1$ et $d_2$, $B$ le point d'intersection de $d_2$ et $d_3$ et $C$ le point d'intersection de $d_1$ et $d_3$. Que vaut le périmètre du triangle $ABC$? 
+
+:::: {.columns}
+
+::: {.column width="48%"}
+⃝ **A**&nbsp;&nbsp;&nbsp;&nbsp; $\sqrt{10}$
+
+[✓ **C**&nbsp;&nbsp;&nbsp;&nbsp; $\sqrt{10}+\sqrt{20}$]{style="color:green;"}
+:::
+
+::: {.column width="48%"}
+⃝ **B**&nbsp;&nbsp;&nbsp;&nbsp; $\sqrt{5}+\sqrt{10}$
+
+⃝ **D**&nbsp;&nbsp;&nbsp;&nbsp; $\sqrt{20}+\sqrt{40}$
+:::
+
+::::
+
+::::
+
+. . .
+
+**Stratégie:** on calcule les coordonnées des points puis les distances entre ces points. Le périmètre cherché est la somme de ces distances.
+
+## Calcul des coordonnées de $A$
+
+On résout le système 
+\begin{cases}y=3x+1\\y=\dfrac{1}{2}x+1.\end{cases}
+
+. . .
+
+On a $3x+1=\dfrac{1}{2}x+1$. Donc, $x=0$. De la première équation, on a $y=1$.
+
+. . .
+
+Donc $A=(0;1)$.
+
+## Calcul des coordonnées de $B$
+
+On résout le système 
+\begin{cases}y=\dfrac{1}{2}x+1\\y=6-2x.\end{cases}
+
+. . .
+
+On a $\dfrac{1}{2}x+1=6-2x$. Donc, $x=2$. De la deuxième équation, on a $y=2$.
+
+. . .
+
+Donc $B=(2;2)$.
+
+## Calcul des coordonnées de $C$
+
+On résout le système 
+\begin{cases}y=6-2x\\y=3x+1.\end{cases}
+
+. . .
+
+On a $6-2x=3x+1$. Donc, $x=1$. De la première équation, on a $y=4$.
+
+. . .
+
+Donc $C=(1;4)$.
+
+## Calcul des distances et du périmètre
+
+$A=(0;1)$, $B=(2;2)$ et $C=(1;4)$.
+
+- $\|AB\|=\sqrt{(2-0)^2+(2-1)^2}=\sqrt{4+1}=\sqrt{5}$
+- $\|AC\|=\sqrt{(1-0)^2+(4-1)^2}=\sqrt{1+9}=\sqrt{10}$
+- $\|BC\|=\sqrt{(1-2)^2+(4-2)^2}=\sqrt{1+4}=\sqrt{5}$
+
+. . .
+
+Donc le périmètre vaut $P=2\sqrt{5}+\sqrt{10}=\sqrt{20}+\sqrt{10}$.
+
+. . .
+
+Donc la bonne réponse est la réponse **C**.
+
+##
+
+::::{.exr nbr="17"}
+
+Dans le plan muni d'un repère orthonormé, on considère la droite $d_1$ d'équation $y+2x-4=0$ ainsi que la droite $d_2$ perpendiculaire à $d_1$ et passant par le point $A(7;5)$.
+
+Quelles sont les coordonnées du point d'intersection de $d_1$ et $d_2$?
+
+:::: {.columns}
+
+::: {.column width="48%"}
+⃝ **A**&nbsp;&nbsp;&nbsp;&nbsp; $(0;3/2)$
+
+⃝ **C**&nbsp;&nbsp;&nbsp;&nbsp; $(-2;1)$
+:::
+
+::: {.column width="48%"}
+⃝ **B**&nbsp;&nbsp;&nbsp;&nbsp; $(2;1)$
+
+[✓ **D**&nbsp;&nbsp;&nbsp;&nbsp; $(1;2)$]{style="color:green;"}
+:::
+
+::::
+
+::::
+
+. . .
+
+**Stratégie:** similaire aux questions 13 et 14.
+
+## Calcul d'une équation pour $d_2$
+
+Comme $d_1\perp d_2$, le produit de leur pentes vaut $-1$. La pente de $d_1$ est $-2$ car:
+
+. . .
+
+$y+2x-4=0\Leftrightarrow y=-2x+4$.
+
+. . .
+
+Donc la pente de $d_2$ vaut $1/2$. Donc $d_2\equiv y=\dfrac{1}{2}x+p$.
+
+. . .
+
+Comme $(7;5)\in d_2$, $5=\dfrac{1}{2}\cdot 7+p$. Donc $p=5-\dfrac{7}{2}=\dfrac{3}{2}$. Donc
+
+$$
+d_2\equiv y=\dfrac{1}{2}x+\dfrac{3}{2}.
+$$
+
+## Calcul du point d'intersection des deux droites.
+
+On résout le système suivant
+
 \begin{cases}
-k_1 = 1 \\
-k_2 = 0
+y=-2x+4\\
+y=\dfrac{1}{2}x+\dfrac{3}{2}
 \end{cases}
-$$
 
-5. Conclusion: $y(t) = \cos(t)$.
+. . .
 
-6. Vérification:
+Des deux équations, on a $-2x+4=\dfrac{1}{2}x+\dfrac{3}{2}$. Donc $x=1$. On sait donc déjà que la réponse est la réponse **D**.
 
-## Rappel 
+. . .
 
-La résolution d'une EDO (de degré 1 ou 2) se fait en deux grandes étapes (Principe de superposition):
-
-1. On calcule **toutes** les solutions de l'équation homogène (=sans terme indépendant).
-
-  - Pour l'ordre 1: l'équation homogène est séparable.
-  - Pour l'ordre 2: on résout l'équation homogène en calculant les racines du polynôme caractéristique (cf. slide suivante)
-
-2. On calcule **UNE** solution de l'équation de départ:
-
-  - Pour l'équation $y'=ay+b$, on utilise la **variation des constantes**: une solution particulière est de la forme 
-  $y(t)=k(t)\e^{A(t)}$ où $A'(t)=a(t)$ et $k$ est à déterminer
-
-  - Pour l'équation $ay''+by'+cy=f(t)$, on donnera **toujours** la forme d'une solution particulière dans l'énoncé de l'exercice.
-
-## Rappel
-
-Pour résoudre l'équation $ay''+by'+cy=0$, on calcule les racines du polynôme $P(x)=ax^2+bx+c$. 
-
-1. Si $P$ a deux racines réelles distinctes $r_1$ et $r_2$ ($\Delta>0$), alors la solution générale de l'équation est
-
-  $$
-k_1\e^{r_1t}+k_2\e^{r_2t}
-  $$
-
-2. Si $P$ a une unique racine réelle $r$ ($\Delta=0$), alors la solution générale de l'équation est
-
-$$
-(k_1+k_2t)\e^{rt}
-$$
-
-3. Si $P$ a deux solutions complexes $u+iv$ et $u-iv$ ($\Delta<0$), alors la solution générale de l'équation est
-
-$$
-\e^{ut}\left(k_1\cos(vt)+k_2\sin(vt)\right)=c_1\e^{ut}\sin(vt+c_2).
-$$
-
-
-## 
-
-:::{.exr nbr="1.1.9"}
-On considère l'équation $2y''(t) - 4y'(t) - 6y(t) = 2$.
-
-(a) Donner la solution générale de l’équation homogène associée.
-(b) Trouver une fonction constante qui est solution de $2y''(t) - 4y'(t) - 6y(t) = 2$.
-(c) Donner la fonction $y(t)$ qui satisfait l’équation de b) ainsi que les conditions $y(0) =0, y'(0) = 5.$
-:::
+Donc pour gagner du temps, on peut ne pas calculer pas $y$! Cependant, de la première équation, $y=-2+4=2$. 
 
 ##
 
-:::{.exr nbr="1.1.9"}
+::::{.exr nbr="18"}
 
-On considère l'équation $2y''(t) - 4y'(t) - 6y(t) = 2$.
+On considère dans le plan quatre points $P$, $Q$, $R$ et $S$ formant un parallélogramme et $M$ le milieu des deux diagonales $PR$ et $QS$.
 
-(a) Donner la solution générale de l’équation homogène associée.
+Quelle est l'égalité correcte parmi les quatre propositions suivantes?
 
+:::: {.columns}
+
+::: {.column width="48%"}
+[✓ **A**&nbsp;&nbsp;&nbsp;&nbsp; $\vect{SP} = \vect{MQ}-\vect{MR}$]{style="color:green;"}
+
+⃝ **C**&nbsp;&nbsp;&nbsp;&nbsp; $\vect{SP} = \vect{QM}-\vect{RM}$
 :::
 
+::: {.column width="48%"}
+⃝ **B**&nbsp;&nbsp;&nbsp;&nbsp; $\vect{SP} = \vect{MR}-\vect{MQ}$
 
-<input type="checkbox" class="hide-toggle" id="toggle3" style="display:none;">
-<label for="toggle3" class="hide-toggle-label">☑</label>
-
-:::{.hide}
-1. L'équation homogène est: $2y'' - 4y' - 6y = 0$
-2. Polynôme caractéristique : $2x^2 - 4x - 6$
-3. Racines du polynôme: $\Delta = 64$, donc les racines sont: $-1$ et $3$.
-4. Écriture de la solution générale:
-$$
-y_h(t) = k_1 e^{-t} + k_2 e^{3t}
-$$
-
+⃝ **D**&nbsp;&nbsp;&nbsp;&nbsp; $\vect{SP} = \vect{RM}-\vect{RQ}$
 :::
 
-## 
+::::
 
-:::{.exr nbr="1.1.9"}
+::::
 
-On considère l'équation $2y''(t) - 4y'(t) - 6y(t) = 2$.
+. . .
 
-(b) Trouver une fonction constante qui est solution de $2y''(t) - 4y'(t) - 6y(t) = 2$.
+**Stratégie:** on teste les différentes proposition, après manipulation des égalités.
 
+![](figures/q18.svg){fig-align="center" width=40%}
+
+## Réponse A $\vect{SP} = \vect{MQ}-\vect{MR}$
+
+
+On a $\vect{MQ}-\vect{MR}=\vect{MQ}+\vect{RM}=\vect{RQ}\?\vect{SP}$.
+
+![](figures/q18.svg){fig-align="center" width=40%}
+
+. . .
+
+Donc la bonne réponse est la réponse **A**
+
+## Réponse B $\vect{SP} = \vect{MR}-\vect{MQ}$
+
+
+On a $\vect{MR}-\vect{MQ}=\vect{MR}+\vect{QM}=\vect{QR}\?\vect{SP}$.
+
+![](figures/q18.svg){fig-align="center" width=40%}
+
+. . .
+
+Donc **B** n'est pas la bonne réponse.
+
+##
+
+::::{.exr nbr="19"}
+
+Dans le plan cartésien orthonormé, on considère le parallélogramme de sommets $A(2;1)$, $B(5;4)$, $C(\alpha;\beta)$ et $D(50;3)$, où les constantes $\alpha$ et $\beta$ vérifient $\alpha>50$ et $\beta>4$.
+
+Que vaut $(\alpha;\beta)$?
+
+:::: {.columns}
+
+::: {.column width="48%"}
+⃝ **A**&nbsp;&nbsp;&nbsp;&nbsp; $(51;7)$
+
+[✓ **C**&nbsp;&nbsp;&nbsp;&nbsp; $(53;6)$]{style="color:green;"}
 :::
 
+::: {.column width="48%"}
+⃝ **B**&nbsp;&nbsp;&nbsp;&nbsp; $(52;5)$
 
-<input type="checkbox" class="hide-toggle" id="toggle0" style="display:none;">
-<label for="toggle0" class="hide-toggle-label">☑</label>
-
-:::{.hide}
-1. On pose $y_p(t)=c$, où $c\in\IR$ est à déterminer.
-2. $y_p$ est une solution. Comme $c'=0$ et $c''=0$ :
-
-$$
--6c = 2
-$$
-
-Donc $y_p(t) = -\frac{1}{3}$ est la solution particulière cherchée.
-
+⃝ **D**&nbsp;&nbsp;&nbsp;&nbsp; $(57;5)$
 :::
 
-## 
+::::
 
-:::{.exr nbr="1.1.9"}
+::::
 
-On considère l'équation $2y''(t) - 4y'(t) - 6y(t) = 2$.
+. . .
 
-(c) Donner la fonction $y(t)$ qui satisfait l’équation de b) ainsi que les conditions $y(0) =0, y'(0) = 5$.
+**Stratégie:** On exprime vectoriellement la condition que $ABCD$ est un parallélogramme.
 
+. . .
+
+**Rappel:** $ABCD$ forme un parallélogramme SSI $\vect{AB}=\vect{DC}$ (ou $\vect{AD}=\vect{BC}$ ou ...)
+
+![](figures/q19.svg){fig-align="center" width=40%}
+
+## Calcul des vecteurs:
+
+$\vect{AB}=(5-2;4-1)=(3;3)$
+
+$\vect{DC}=(\alpha-50;\beta-3)$
+
+. . .
+
+Donc $\vect{AB}=\vect{DC}\Leftrightarrow(3;3)=(\alpha-50;\beta-3)$.
+
+. . .
+
+Donc $3=\alpha-50$ et $3=\beta-3$. Donc $\alpha=53$ et $\beta=6$.
+
+. . .
+
+La bonne réponse est la réponse **C**.
+
+##
+
+::::{.exr nbr="20"}
+
+Dans le plan muni d'un repère orthonormé, on considère les points $A(2;-1)$, $B(3;4)$ et $C(-4;6)$. Posons $\vec v = 2 \vect{AB} + \vect{BC}$. Parmi les propositions suivantes, laquelle est correcte?
+
+:::: {.columns}
+
+::: {.column width="48%"}
+⃝ **A**&nbsp;&nbsp;&nbsp;&nbsp; $\|-7 \vec v \| = 7\sqrt{85}$
+
+⃝ **C**&nbsp;&nbsp;&nbsp;&nbsp; $\|-7 \vec v \| = 14\sqrt{26} +7 \sqrt{53}$
 :::
 
+::: {.column width="48%"}
+[✓ **B**&nbsp;&nbsp;&nbsp;&nbsp; $\|-7 \vec v \| = 91$]{style="color:green;"}
 
-<input type="checkbox" class="hide-toggle" id="toggle4" style="display:none;">
-<label for="toggle4" class="hide-toggle-label">☑</label>
-
-:::{.hide}
-
-1. Écriture de la solution générale de l'équation non-homogène :$y(t) = k_1 e^{-t} + k_2 e^{3t} - \dfrac{1}{3}$
-
-2. On cherche la solution qui satisfait les conditions initiales:$\begin{cases}
-k_1 + k_2 - \frac{1}{3} = 0 \\
--k_1 + 3k_2 = 5
-\end{cases}
-$
-
-  Donc : $k_1 = -1, \quad k_2 = \dfrac{4}{3}$.
-
-3. Conclusion: $y(t) = -e^{-t} + \dfrac{4}{3}e^{3t} - \dfrac{1}{3}$
-
+⃝ **D**&nbsp;&nbsp;&nbsp;&nbsp; $\|-7 \vec v \| = - \sqrt{8~281}$
 :::
 
-## Exercice 1.1.4
-
-:::{.exr nbr="1.1.9"}
-
-Résoudre l'équation suivante avec la méthode de la variation de la constante: $y'-3y=8t\cdot \e^{5t}$.
-
-:::
+::::
+::::
 
 
-<input type="checkbox" class="hide-toggle" id="toggle1" style="display:none;">
-<label for="toggle1" class="hide-toggle-label">☑</label>
+. . .
 
-On applique le principe de superposition:
+**Stratégie:** on calcule les composantes des vecteurs puis la norme demandée.
 
-(a) Résolution de l'équation homogène: $y'-3y=0$.
+## Calcul de $\vect{v}$ et de sa norme
 
-:::{.hide}
+- $\vect{AB}=(3-2;4-(-1))=(1;5)$
+- $\vect{BC}=(-4-3;6-4)=(-7;2)$
+- $\vect{v}=2\vect{AB}+\vect{BC}=2(1;5)+(-7;2)=(2;10)+(-7;2)=(2-7;10+2)=(-5;12)$
 
-L'équation homogène est séparable et on obtient:
+. . .
 
-$$
-y_h(t) = k e^{3t}
-$$
+Donc $\|\vect{v}\|=\sqrt{(-5)^2+12^2}=\sqrt{25+144}=\sqrt{169}=13$
 
-:::
+. . .
 
-## 
-:::{.exr nbr="1.1.9"}
+Donc $\|-7\vect{v}\|=7\|\vect{v}\|=7\cdot 13=91$.
 
-Résoudre l'équation suivante avec la méthode de la variation de la constante: $y'-3y=8t\cdot \e^{5t}$.
+. . .
 
-:::
-
-
-<input type="checkbox" class="hide-toggle" id="toggle5" style="display:none;">
-<label for="toggle5" class="hide-toggle-label">☑</label>
-
-On applique le principe de superposition:
-
-(b) On cherche **UNE** solution de l'équation $y'-3y=8t\cdot \e^{5t}$.
-
-
-:::{.hide}
-On cherche une solution de la forme $y_p(t) = k(t)e^{3t}$.
-
-Puisque $y_p$ est une solution de l'équation pour une fonction $k$ à déterminer:
-
-
-$$
-k(t) = \int 8t e^{5t} e^{-3t} dt
-= \int 8t e^{2t} dt
-$$
+Donc la bonne réponse est la réponse **B**.
 
 
 
-:::
-
-## 
-
-:::{.exr nbr="1.1.9"}
-
-Résoudre l'équation suivante avec la méthode de la variation de la constante: $y'-3y=8t\cdot \e^{5t}$.
-
-:::
-
-
-<input type="checkbox" class="hide-toggle" id="toggle7" style="display:none;">
-<label for="toggle7" class="hide-toggle-label">☑</label>
-
-On applique le principe de superposition:
-
-(b) On cherche **UNE** solution de l'équation $y'-3y=8t\cdot \e^{5t}$.
-
-:::{.hide}
-
-Par intégration par parties, on trouve donc **UNE** fonction $k$: $k(t) = (4t-2)e^{2t}$.
-
-(Remarque : pas besoin d'ajouter une constante d’intégration.)
-
-Donc $y_p(t) = (4t-2)e^{5t}$
-
-En conclusion: $y(t) = k e^{3t} + (4t-2)e^{5t}$ avec $k \in \mathbb{R}$.
-
-:::
-
-
-
-
-<script>
-document.querySelectorAll('.reveal .slide').forEach(slide => {
-  const checkbox = slide.querySelector('.hide-toggle');
-  const hideBlocks = slide.querySelectorAll('.hide');
-  if (checkbox && hideBlocks.length > 0) {
-    checkbox.addEventListener('change', () => {
-      hideBlocks.forEach(b => {
-        b.style.display = checkbox.checked ? 'block' : 'none';
-      });
-    });
-  }
-});
-</script>

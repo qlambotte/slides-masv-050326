@@ -1,0 +1,57 @@
+\documentclass[tikz,border=5pt]{standalone}
+
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+% -----------------------
+% Points du parallélogramme
+% -----------------------
+\coordinate (P) at (0,0);
+\coordinate (Q) at (4,0);
+\coordinate (S) at (-1,-3);
+\coordinate (R) at ($(Q)+(S)-(P)$);
+\coordinate (M) at (1.5,-1.5);
+
+
+% -----------------------
+% Figure
+% -----------------------
+\tkzDrawPolygon(P,Q,R,S)
+
+% -----------------------
+% Labels
+% -----------------------
+\tkzLabelPoints[above left](P)
+\tkzLabelPoints[above right](Q)
+\tkzLabelPoints[above](M)
+
+\tkzLabelPoints[below left](S)
+\tkzLabelPoints[below right](R)
+\tkzDrawPoints[color=black,size=2](M,P,Q,R,S)
+
+% -----------------------
+% Vecteurs directionnels
+% -----------------------
+\tkzDrawSegment[dotted](P,R)
+\tkzDrawSegment[dotted](Q,S)
+
+%\tkzDrawVector(S,R)
+%\tkzDrawVector(P,S)
+%\tkzDrawVector(Q,R)
+
+% -----------------------
+% Indications de parallélisme
+% -----------------------
+%\tkzLabelSegment[below](P,Q){$\vec{PQ}$}
+%\tkzLabelSegment[above](S,R){$\vec{SR}$}
+
+%\tkzLabelSegment[left](P,S){$\vec{PS}$}
+%\tkzLabelSegment[right](Q,R){$\vec{QR}$}
+
+\end{tikzpicture}
+
+\end{document}
